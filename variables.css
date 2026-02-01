@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Work Sans';
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf) format('truetype');
+    font-weight: 400 700;
+    font-style: normal;
+}
+
+:root {
+    /*COLORS*/
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --purple-950: hsl(292, 42%, 14%);
+    --purple-600: hsl(292, 16%, 49%);
+    --purple-100: hsl(275, 100%, 97%);
+    --violet-600: hsl(281, 83%, 54%);
+
+    /*TYPOGRAPHY*/
+    --font-family-worksans: 'Work Sans', sans-serif;
+
+    --font-size-xl-desktop: 56px;
+    --font-size-xl-mobile: 32px;
+    --font-size-large: 18px;
+    --font-size-regular: 16px;
+
+    --font-weight-bold: 700;
+    --font-weight-semi-bold: 600;
+    --font-weight-regular: 400;
+
+    --line-height-xl: 66px;
+    --line-height-large: 24px;
+    --line-height-regular: 21px;
+
+    --letter-spacing-regular: 0px;
+
+    /*SPACING*/
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+}
