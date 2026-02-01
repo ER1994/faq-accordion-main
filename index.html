@@ -6,7 +6,10 @@
     <!-- displays site properly based on user's device -->
 
     <link href="./assets/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-
+    <link href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css" rel="stylesheet">
+    <link href="./variables.css" rel="stylesheet">
+    <link href="./main.css" rel="stylesheet">
+    <script defer src="./faq-accordion.js"></script>
     <title>Frontend Mentor | FAQ accordion</title>
 </head>
 <body>
@@ -19,43 +22,47 @@
 <main>
     <dl>
         <dt>
-            <button type="button" aria-expanded="false" aria-controls="faq-about" id="faq-about-btn">
+            <button aria-controls="faq-about" aria-expanded="false" class="faq-accordion-btn" id="faq-about-btn"
+                    type="button">
                 <span>What is Frontend Mentor, and how will it help me?</span>
                 <img alt="" src="./assets/images/icon-plus.svg">
             </button>
         </dt>
-        <dd id="faq-about" aria-labelledby="faq-about-btn" hidden="true">
+        <dd aria-labelledby="faq-about-btn" hidden="true" id="faq-about">
             Frontend Mentor offers realistic coding challenges to help developers improve their
             frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
             all levels and ideal for portfolio building.
         </dd>
         <dt>
-            <button type="button" aria-expanded="false" aria-controls="faq-free" id="faq-free-btn">
+            <button aria-controls="faq-free" aria-expanded="false" class="faq-accordion-btn" id="faq-free-btn"
+                    type="button">
                 <span>Is Frontend Mentor free?</span>
                 <img alt="" src="./assets/images/icon-plus.svg">
             </button>
         </dt>
-        <dd id="faq-free" aria-labelledby="faq-free-btn" hidden="true">
+        <dd aria-labelledby="faq-free-btn" hidden="true" id="faq-free">
             Yes, Frontend Mentor offers both free and premium coding challenges, with the free
             option providing access to a range of projects suitable for all skill levels.
         </dd>
         <dt>
-            <button type="button" aria-expanded="false" aria-controls="faq-portfolio" id="faq-portfolio-btn">
+            <button aria-controls="faq-portfolio" aria-expanded="false" class="faq-accordion-btn" id="faq-portfolio-btn"
+                    type="button">
                 <span>Can I use Frontend Mentor projects in my portfolio?</span>
                 <img alt="" src="./assets/images/icon-plus.svg">
             </button>
         </dt>
-        <dd id="faq-portfolio" aria-labelledby="faq-portfolio-btn" hidden="true">
+        <dd aria-labelledby="faq-portfolio-btn" hidden="true" id="faq-portfolio">
             Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
             way to showcase your skills to potential employers!
         </dd>
         <dt>
-            <button type="button" aria-expanded="false" aria-controls="faq-help" id="faq-help-btn">
-                <span>How can I get help if I'm stuck on a Frontend Mentor challenge?</span>
+            <button aria-controls="faq-help" aria-expanded="false" class="faq-accordion-btn" id="faq-help-btn"
+                    type="button">
+                <span>How can I get help if I'm stuck on a challenge?</span>
                 <img alt="" src="./assets/images/icon-plus.svg">
             </button>
         </dt>
-        <dd id="faq-help" aria-labelledby="faq-help-btn" hidden="true">
+        <dd aria-labelledby="faq-help-btn" hidden="true" id="faq-help">
             The best place to get help is inside Frontend Mentor's Discord community. There's a help
             channel where you can ask questions and seek support from other community members.
         </dd>
