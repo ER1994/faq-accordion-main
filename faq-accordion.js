@@ -1,17 +1,35 @@
-const faqAccordionBtn = document.querySelectorAll('.faq-accordion-btn')
+const dl = document.getElementById('faq-accordion')
+const faqAccordionBtn = dl.querySelectorAll('.faq-accordion-btn')
 
+function closeBtn (btn) {
+    const dd = dl.querySelector(`dd[aria-labelledby = "${btn.id}"]`)
+    dd.hidden = true
+    btn.setAttribute('aria-expanded', 'false')
+    const img = btn.querySelector('img')
+    img.src = './assets/images/icon-plus.svg'
+}
+
+function openBtn (btn) {
+    const dd = dl.querySelector(`dd[aria-labelledby = "${btn.id}"]`)
+    dd.hidden = false
+    btn.setAttribute('aria-expanded', 'true')
+    const img = btn.querySelector('img')
+    img.src = './assets/images/icon-minus.svg'
+}
 
 function toggleAccordion(e) {
-    // const description = document.querySelector(`dd[aria-labelledby="${e.currentTarget.id}"]`)
-    const dds = document.querySelectorAll(`dd`)
-    dds.forEach( dd => {
-        if (dd.getAttribute('aria-labelledby') === e.currentTarget.id ) {
-            dd.toggleAttribute('hidden')
+    const currentBtn = e.currentTarget
+    faqAccordionBtn.forEach( btn => {
+        if (btn.id === currentBtn.id) {
+            openBtn(btn)
         } else {
-            dd.hidden = true
+            closeBtn(btn)
         }
     })
 }
+
+
+faqAccordionBtn.forEach( btn => closeBtn(btn))
 
 faqAccordionBtn.forEach( btn => {
     btn.addEventListener('click', (e) => toggleAccordion(e))
