@@ -4,6 +4,9 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
 }
 body {
     background-color: var(--white);
@@ -38,11 +41,6 @@ dl {
     width: 100%;
 }
 
-.desc-wrapper {
-    display: flex;
-    flex-direction: column;
-}
-
 dt {
     margin-bottom: calc(var(--spacing-300) * 2);
 }
@@ -69,6 +67,11 @@ dd {
 }
 
 @media (min-width: 768px) {
+    html {
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
     body {
         width: 600px;
     }
